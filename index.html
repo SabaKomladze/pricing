@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
     <title>Interactive pricing component</title>
@@ -16,13 +16,20 @@
             No credit card required. </p>
     </header>
     <section class="main">
-        <h3>100K PAGEVIEWS</h3>
-        <input type="range" id="range" min="2" max="32" step="2" >
-        <h2>$16.00<span class="month"> / month</span></h2>
+        <section class="upper">
+            <h3> <span id="views">100K</span> PAGEVIEWS</h3>
+            <input type="range" id="range" min="0" max="4" step="1" >
+            <div class="cst">
+                <h2>$ <span class="cost">16</span>.00</h2>
+                <p class="time">/month</p>
+            </div>
+
+        </section>
+        
         <div class="billing">
             <span class="monthly">Monthly Billing</span>
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" name="billing" id="billing">
                 <span class="slider"></span>
             </label>
             <span class="yearly">Yearly Billing</span>
@@ -30,9 +37,11 @@
         </div>
         <hr>
 <div class="footer">
+    <div class="list">
     <p class="check">Unlimited websites</p>
     <p class="check">100% data ownership </p>
     <p class="check">Email reports</p>
+</div>
     <button type="button" class="btn">Start my trial</button>
 </div>
 
